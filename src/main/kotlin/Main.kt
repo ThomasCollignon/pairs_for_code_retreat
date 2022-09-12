@@ -6,13 +6,15 @@ import kotlin.streams.asStream
 fun main() {
     val inputData = InputData(
         setOf(
-            Developer("Thomas", setOf(JAVA, RUBY)),
-            Developer("Dom", setOf(RUBY)),
-            Developer("Edgard", setOf(JAVA, ELIXIR, RUBY, C, CSHARP, JAVASCRIPT)),
-            Developer("Malian", setOf(JAVA, ELIXIR, C, CSHARP, JAVASCRIPT)),
-            Developer("Cédric", setOf(JAVASCRIPT)),
-            Developer("Camille", setOf(JAVA)),
-            Developer("Nicolas", setOf(JAVA)),
+            Developer("Thomas", setOf(JAVA, KOTLIN)),
+            Developer("Pierre-Yves", setOf(JAVASCRIPT, CSHARP)),
+            Developer("Nicolas D", setOf(JAVASCRIPT, TYPESCRIPT, BASH)),
+            Developer("Edgard", setOf(JAVA, ELIXIR, RUBY, C, CSHARP, JAVASCRIPT, TYPESCRIPT, KOTLIN, PYTHON)),
+//            Developer("Malian", setOf(JAVA, ELIXIR, C, CSHARP, JAVASCRIPT, PYTHON, PHP)),
+            Developer("Cédric", setOf(JAVASCRIPT, TYPESCRIPT)),
+            Developer("Mohamed", setOf(JAVA)),
+            Developer("Frek", setOf(JAVA)),
+            Developer("Martin", setOf(FLUTTER, PYTHON, RUBY, JAVASCRIPT)),
         )
     )
     val teamMaker = TeamMaker()
@@ -127,5 +129,5 @@ data class Developer(val name: String, val languages: Set<Language>) {
 }
 
 enum class Language {
-    JAVA, ELIXIR, RUBY, C, CSHARP, JAVASCRIPT, PYTHON
+    JAVA, ELIXIR, RUBY, C, CSHARP, JAVASCRIPT, PYTHON, TYPESCRIPT, BASH, KOTLIN, PHP, FLUTTER
 }
